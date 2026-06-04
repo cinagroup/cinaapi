@@ -1,0 +1,14 @@
+# Optional frontend service reference
+#
+# The frontend is actually deployed on Cloudflare Pages — this file only
+# records the build settings and environment variables for reference.
+#
+# Cloudflare Pages settings:
+#   Build command:    cd web && bun install && cd default && bun run build
+#   Output directory: web/default/dist
+#
+# Environment variables (set in Cloudflare Pages dashboard):
+#   VITE_REACT_APP_SERVER_URL  →  https://api.yourdomain.com  (your backend API URL)
+#
+# To preview frontend locally:
+#   cd web && bun install && cd default && bun run dev

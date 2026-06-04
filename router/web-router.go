@@ -22,6 +22,19 @@ type ThemeAssets struct {
 }
 
 func SetWebRouter(router *gin.Engine, assets ThemeAssets) {
+	// External frontend mode: no embedded assets provided.
+	if assets.DefaultBuildFS == (embed.FS{}) {
+		router.NoRoute(func(c *gin.Context) {
+			c.Set(middleware.RouteTagKey, "web")
+			if strings.HasPrefix(c.Request.RequestURI, "/v1") || strings.HasPrefix(c.Request.RequestURI, "/api") || strings.HasPrefix(c.Request.RequestURI, "/assets") {
+				controller.RelayNotFound(c)
+				return
+			}
+			c.Data(http.StatusNotFound, "text/html; charset=utf-8", []byte("Frontend not available (no embedded static files)"))
+		})
+		return
+	}
+
 	defaultFS := common.EmbedFolder(assets.DefaultBuildFS, "web/default/dist")
 	classicFS := common.EmbedFolder(assets.ClassicBuildFS, "web/classic/dist")
 	themeFS := common.NewThemeAwareFS(defaultFS, classicFS)

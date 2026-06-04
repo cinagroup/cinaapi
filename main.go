@@ -35,17 +35,37 @@ import (
 	_ "net/http/pprof"
 )
 
-//go:embed web/default/dist
-var buildFS embed.FS
+// useExternalFrontend returns true when embedded frontend assets should be
+// skipped in favour of an externally served frontend. This happens when:
+//   - FRONTEND_EMBED=false
+//   - FRONTEND_BASE_URL is set to a non-empty value
+//   - No frontend assets were embedded at build time (no -tags embed_frontend)
+func useExternalFrontend() bool {
+	if v := os.Getenv("FRONTEND_EMBED"); v == "false" {
+		return true
+	}
+	if os.Getenv("FRONTEND_BASE_URL") != "" {
+		return true
+	}
+	// No assets embedded at build time → external mode
+	if buildFS == (embed.FS{}) {
+		return true
+	}
+	return false
+}
 
-//go:embed web/default/dist/index.html
-var indexPage []byte
-
-//go:embed web/classic/dist
-var classicBuildFS embed.FS
-
-//go:embed web/classic/dist/index.html
-var classicIndexPage []byte
+// Frontend asset variables.
+// When built with: go build -tags embed_frontend
+//   the actual //go:embed values come from main_embed.go.
+// When built without the tag (default):
+//   these remain nil/empty; useExternalFrontend() gates all usage so they
+//   are never read, and the binary carries no frontend assets.
+var (
+	buildFS          embed.FS
+	indexPage        []byte
+	classicBuildFS   embed.FS
+	classicIndexPage []byte
+)
 
 func main() {
 	startTime := time.Now()
@@ -186,16 +206,28 @@ func main() {
 	})
 	server.Use(sessions.Sessions("session", store))
 
-	InjectUmamiAnalytics()
-	InjectGoogleAnalytics()
+	// Analytics injection (embed-based index pages) – skip in external
+	// frontend mode because indexPage / classicIndexPage are never used.
+	if !useExternalFrontend() {
+		InjectUmamiAnalytics()
+		InjectGoogleAnalytics()
+	}
 
 	// 设置路由
-	router.SetRouter(server, router.ThemeAssets{
-		DefaultBuildFS:   buildFS,
-		DefaultIndexPage: indexPage,
-		ClassicBuildFS:   classicBuildFS,
-		ClassicIndexPage: classicIndexPage,
-	})
+	if useExternalFrontend() {
+		// External frontend mode: no embedded assets passed.
+		// The router will either redirect to FRONTEND_BASE_URL or
+		// return 404 for web routes.
+		common.SysLog("running in external frontend mode (no embedded static files)")
+		router.SetRouter(server, router.ThemeAssets{})
+	} else {
+		router.SetRouter(server, router.ThemeAssets{
+			DefaultBuildFS:   buildFS,
+			DefaultIndexPage: indexPage,
+			ClassicBuildFS:   classicBuildFS,
+			ClassicIndexPage: classicIndexPage,
+		})
+	}
 	var port = os.Getenv("PORT")
 	if port == "" {
 		port = strconv.Itoa(*common.Port)
