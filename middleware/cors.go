@@ -4,7 +4,7 @@ import (
 	"os"
 	"strings"
 
-	"github.com/QuantumNous/new-api/common"
+	"github.com/cinagroup/cinatoken/common"
 	"github.com/gin-contrib/cors"
 	"github.com/gin-gonic/gin"
 )

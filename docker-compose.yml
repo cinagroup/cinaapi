@@ -8,7 +8,7 @@ version: '3.4'
 
 services:
   cinatoken:
-    image: calciumion/new-api:latest
+    image: cinagroup/cinatoken:latest
     container_name: cinatoken
     restart: always
     command: --log-dir /app/logs

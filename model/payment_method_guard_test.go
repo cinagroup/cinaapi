@@ -4,7 +4,7 @@ import (
 	"testing"
 	"time"
 
-	"github.com/QuantumNous/new-api/common"
+	"github.com/cinagroup/cinatoken/common"
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 )

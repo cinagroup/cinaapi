@@ -3,8 +3,8 @@ package controller
 import (
 	"testing"
 
-	"github.com/QuantumNous/new-api/setting"
-	"github.com/QuantumNous/new-api/setting/operation_setting"
+	"github.com/cinagroup/cinatoken/setting"
+	"github.com/cinagroup/cinatoken/setting/operation_setting"
 	"github.com/stretchr/testify/require"
 )
 
