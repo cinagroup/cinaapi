@@ -1,8 +1,8 @@
 <div align="center">
 
-![new-api](/web/default/public/logo.png)
+![cinatoken](/web/default/public/logo.png)
 
-# New API
+# CinaToken
 
 🍥 **Next-Generation LLM Gateway and AI Asset Management System**
 

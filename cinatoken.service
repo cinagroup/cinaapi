@@ -1,0 +1,18 @@
+# File path: /etc/systemd/system/cinatoken.service
+# sudo systemctl daemon-reload
+# sudo systemctl start cinatoken
+# sudo systemctl enable cinatoken
+# sudo systemctl status cinatoken
+[Unit]
+Description=CinaToken - AI Model Gateway
+After=network.target
+
+[Service]
+User=ubuntu  # 注意修改用户名
+WorkingDirectory=/path/to/cinatoken  # 注意修改路径
+ExecStart=/path/to/cinatoken/new-api --port 3000 --log-dir /path/to/cinatoken/logs  # 注意修改路径和端口号
+Restart=always
+RestartSec=5
+
+[Install]
+WantedBy=multi-user.target

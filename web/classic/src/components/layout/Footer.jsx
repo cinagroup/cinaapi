@@ -1,5 +1,5 @@
 /*
-Copyright (C) 2025 QuantumNous
+Copyright (C) 2025 CinaGroup
 
 This program is free software: you can redistribute it and/or modify
 it under the terms of the GNU Affero General Public License as
@@ -143,12 +143,12 @@ const FooterBar = () => {
                     Midjourney-Proxy
                   </a>
                   <a
-                    href='https://github.com/Calcium-Ion/new-api-key-tool'
+                    href='https://github.com/cinagroup/cinatoken-key-tool'
                     target='_blank'
                     rel='noopener noreferrer'
                     className='!text-semi-color-text-1'
                   >
-                    new-api-key-tool
+                    cinatoken-key-tool
                   </a>
                 </div>
               </div>
@@ -159,12 +159,12 @@ const FooterBar = () => {
                 </p>
                 <div className='flex flex-col gap-4'>
                   <a
-                    href='https://github.com/Calcium-Ion/new-api-horizon'
+                    href='https://github.com/cinagroup/cinatoken-horizon'
                     target='_blank'
                     rel='noopener noreferrer'
                     className='!text-semi-color-text-1'
                   >
-                    new-api-horizon
+                    cinatoken-horizon
                   </a>
                   <a
                     href='https://github.com/coaidev/coai'
@@ -200,12 +200,12 @@ const FooterBar = () => {
               {t('设计与开发由')}{' '}
             </span>
             <a
-              href='https://github.com/QuantumNous/new-api'
+              href='https://github.com/cinagroup/cinatoken'
               target='_blank'
               rel='noopener noreferrer'
               className='!text-semi-color-primary font-medium'
             >
-              New API
+              CinaToken
             </a>
           </div>
         </div>
@@ -232,12 +232,12 @@ const FooterBar = () => {
                 {t('设计与开发由')}{' '}
               </span>
               <a
-                href='https://github.com/QuantumNous/new-api'
+                href='https://github.com/cinagroup/cinatoken'
                 target='_blank'
                 rel='noopener noreferrer'
                 className='!text-semi-color-primary font-medium'
               >
-                New API
+                CinaToken
               </a>
             </div>
           </div>

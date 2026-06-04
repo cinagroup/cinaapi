@@ -1,4 +1,4 @@
-# New-API Docker Compose Configuration
+# CinaToken Docker Compose Configuration
 #
 # Quick Start:
 #   1. docker-compose up -d
@@ -7,9 +7,9 @@
 version: '3.4'
 
 services:
-  new-api:
+  cinatoken:
     image: calciumion/new-api:latest
-    container_name: new-api
+    container_name: cinatoken
     restart: always
     command: --log-dir /app/logs
     ports:
@@ -24,7 +24,7 @@ services:
       - TZ=Asia/Shanghai
       - ERROR_LOG_ENABLED=true                                    # Enable error logging
       - BATCH_UPDATE_ENABLED=true                                 # Enable batch update
-      - NODE_NAME=new-api-node-1                                  # Node name for audit logs
+      - NODE_NAME=cinatoken-node-1                                  # Node name for audit logs
       # - FRONTEND_BASE_URL=https://app.cinatoken.com            # Optional: frontend URL when hosted separately (e.g. Cloudflare Pages)
 #     - STREAMING_TIMEOUT=300                                    # Streaming timeout (s), default 120
 #     - SESSION_SECRET=random_string                              # ⚠️ Required for multi-node deployments!
@@ -34,7 +34,7 @@ services:
       - redis
       - postgres
     networks:
-      - new-api-network
+      - cinatoken-network
     healthcheck:
       test: ["CMD-SHELL", "wget -q -O - http://localhost:3000/api/status | grep -o '\"success\":\\s*true' || exit 1"]
       interval: 30s
@@ -47,7 +47,7 @@ services:
     restart: always
     command: ["redis-server", "--requirepass", "123456"]  # ⚠️ Change password in production!
     networks:
-      - new-api-network
+      - cinatoken-network
 
   postgres:
     image: postgres:15
@@ -60,7 +60,7 @@ services:
     volumes:
       - pg_data:/var/lib/postgresql/data
     networks:
-      - new-api-network
+      - cinatoken-network
 #    ports:
 #      - "5432:5432"  # Uncomment to access PostgreSQL externally
 
@@ -68,5 +68,5 @@ volumes:
   pg_data:
 
 networks:
-  new-api-network:
+  cinatoken-network:
     driver: bridge
