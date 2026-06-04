@@ -253,7 +253,7 @@ function TokensPage() {
     }
 
     const payload = {
-      id: 'new-api',
+      id: 'cinatoken',
       baseUrl: serverAddress,
       apiKey: apiKeyToUse,
       model: chosenModel,

@@ -23,7 +23,7 @@
   <a href="https://github.com/users/cinagroup/packages/container/package/cinatoken">
     <img src="https://img.shields.io/badge/docker-ghcr.io-blue" alt="docker">
   </a>
-  <a href="https://hub.docker.com/r/CalciumIon/new-api">
+  <a href="https://hub.docker.com/r/cinagroup/cinatoken">
     <img src="https://img.shields.io/badge/docker-dockerHub-blue" alt="docker">
   </a>
   <a href="https://goreportcard.com/report/github.com/cinagroup/cinatoken">
@@ -89,13 +89,13 @@
 ## 🙏 Special Thanks
 
 <p align="center">
-  <a href="https://www.jetbrains.com/?from=new-api" target="_blank">
+  <a href="https://www.jetbrains.com/?from=cinatoken" target="_blank">
     <img src="https://resources.jetbrains.com/storage/products/company/brand/logos/jb_beam.png" alt="JetBrains Logo" width="120" />
   </a>
 </p>
 
 <p align="center">
-  <strong>Thanks to <a href="https://www.jetbrains.com/?from=new-api">JetBrains</a> for providing free open-source development license for this project</strong>
+  <strong>Thanks to <a href="https://www.jetbrains.com/?from=cinatoken">JetBrains</a> for providing free open-source development license for this project</strong>
 </p>
 
 ---
@@ -124,14 +124,14 @@ docker-compose up -d
 docker pull cinagroup/cinatoken:latest
 
 # Using SQLite (default)
-docker run --name new-api -d --restart always \
+docker run --name cinatoken -d --restart always \
   -p 3000:3000 \
   -e TZ=Asia/Shanghai \
   -v ./data:/data \
   cinagroup/cinatoken:latest
 
 # Using MySQL
-docker run --name new-api -d --restart always \
+docker run --name cinatoken -d --restart always \
   -p 3000:3000 \
   -e SQL_DSN="root:123456@tcp(localhost:3306)/oneapi" \
   -e TZ=Asia/Shanghai \
@@ -150,7 +150,7 @@ docker run --name new-api -d --restart always \
 > [!WARNING]
 > When operating this project as a public generative AI service or API resale service, users should first complete all required filing, licensing, content safety, real-name verification, log retention, tax, payment, and upstream authorization obligations.
 
-📖 For more deployment methods, please refer to [Deployment Guide](https://docs.newapi.pro/en/docs/installation)
+📖 For more deployment methods, please refer to [Deployment Guide](https://docs.cinatoken.com/en/docs/installation)
 
 ---
 
@@ -158,7 +158,7 @@ docker run --name new-api -d --restart always \
 
 <div align="center">
 
-### 📖 [Official Documentation](https://docs.newapi.pro/en/docs) | [![Ask DeepWiki](https://deepwiki.com/badge.svg)](https://deepwiki.com/cinagroup/cinatoken)
+### 📖 [Official Documentation](https://docs.cinatoken.com/en/docs) | [![Ask DeepWiki](https://deepwiki.com/badge.svg)](https://deepwiki.com/cinagroup/cinatoken)
 
 </div>
 
@@ -166,17 +166,17 @@ docker run --name new-api -d --restart always \
 
 | Category | Link |
 |------|------|
-| 🚀 Deployment Guide | [Installation Documentation](https://docs.newapi.pro/en/docs/installation) |
-| ⚙️ Environment Configuration | [Environment Variables](https://docs.newapi.pro/en/docs/installation/config-maintenance/environment-variables) |
-| 📡 API Documentation | [API Documentation](https://docs.newapi.pro/en/docs/api) |
-| ❓ FAQ | [FAQ](https://docs.newapi.pro/en/docs/support/faq) |
-| 💬 Community Interaction | [Communication Channels](https://docs.newapi.pro/en/docs/support/community-interaction) |
+| 🚀 Deployment Guide | [Installation Documentation](https://docs.cinatoken.com/en/docs/installation) |
+| ⚙️ Environment Configuration | [Environment Variables](https://docs.cinatoken.com/en/docs/installation/config-maintenance/environment-variables) |
+| 📡 API Documentation | [API Documentation](https://docs.cinatoken.com/en/docs/api) |
+| ❓ FAQ | [FAQ](https://docs.cinatoken.com/en/docs/support/faq) |
+| 💬 Community Interaction | [Communication Channels](https://docs.cinatoken.com/en/docs/support/community-interaction) |
 
 ---
 
 ## ✨ Key Features
 
-> For detailed features, please refer to [Features Introduction](https://docs.newapi.pro/en/docs/guide/wiki/basic-concepts/features-introduction)
+> For detailed features, please refer to [Features Introduction](https://docs.cinatoken.com/en/docs/guide/wiki/basic-concepts/features-introduction)
 
 ### 🎨 Core Functions
 
@@ -205,11 +205,11 @@ docker run --name new-api -d --restart always \
 ### 🚀 Advanced Features
 
 **API Format Support:**
-- ⚡ [OpenAI Responses](https://docs.newapi.pro/en/docs/api/ai-model/chat/openai/create-response)
-- ⚡ [OpenAI Realtime API](https://docs.newapi.pro/en/docs/api/ai-model/realtime/create-realtime-session) (including Azure)
-- ⚡ [Claude Messages](https://docs.newapi.pro/en/docs/api/ai-model/chat/create-message)
-- ⚡ [Google Gemini](https://doc.newapi.pro/en/api/google-gemini-chat)
-- 🔄 [Rerank Models](https://docs.newapi.pro/en/docs/api/ai-model/rerank/create-rerank) (Cohere, Jina)
+- ⚡ [OpenAI Responses](https://docs.cinatoken.com/en/docs/api/ai-model/chat/openai/create-response)
+- ⚡ [OpenAI Realtime API](https://docs.cinatoken.com/en/docs/api/ai-model/realtime/create-realtime-session) (including Azure)
+- ⚡ [Claude Messages](https://docs.cinatoken.com/en/docs/api/ai-model/chat/create-message)
+- ⚡ [Google Gemini](https://doc.cinatoken.com/en/api/google-gemini-chat)
+- 🔄 [Rerank Models](https://docs.cinatoken.com/en/docs/api/ai-model/rerank/create-rerank) (Cohere, Jina)
 
 **Intelligent Routing:**
 - ⚖️ Channel weighted random
@@ -252,16 +252,16 @@ docker run --name new-api -d --restart always \
 
 ## 🤖 Model Support
 
-> For details, please refer to [API Documentation - Gateway Interface](https://docs.newapi.pro/en/docs/api)
+> For details, please refer to [API Documentation - Gateway Interface](https://docs.cinatoken.com/en/docs/api)
 
 | Model Type | Description | Documentation |
 |---------|------|------|
 | 🤖 OpenAI GPTs | gpt-4-gizmo-* series | - |
-| 🎨 Midjourney-Proxy | [Midjourney-Proxy(Plus)](https://github.com/novicezk/midjourney-proxy) | [Documentation](https://doc.newapi.pro/en/api/midjourney-proxy-image) |
-| 🎵 Suno-API | [Suno API](https://github.com/Suno-API/Suno-API) | [Documentation](https://doc.newapi.pro/en/api/suno-music) |
-| 🔄 Rerank | Cohere, Jina | [Documentation](https://docs.newapi.pro/en/docs/api/ai-model/rerank/create-rerank) |
-| 💬 Claude | Messages format | [Documentation](https://docs.newapi.pro/en/docs/api/ai-model/chat/create-message) |
-| 🌐 Gemini | Google Gemini format | [Documentation](https://doc.newapi.pro/en/api/google-gemini-chat) |
+| 🎨 Midjourney-Proxy | [Midjourney-Proxy(Plus)](https://github.com/novicezk/midjourney-proxy) | [Documentation](https://doc.cinatoken.com/en/api/midjourney-proxy-image) |
+| 🎵 Suno-API | [Suno API](https://github.com/Suno-API/Suno-API) | [Documentation](https://doc.cinatoken.com/en/api/suno-music) |
+| 🔄 Rerank | Cohere, Jina | [Documentation](https://docs.cinatoken.com/en/docs/api/ai-model/rerank/create-rerank) |
+| 💬 Claude | Messages format | [Documentation](https://docs.cinatoken.com/en/docs/api/ai-model/chat/create-message) |
+| 🌐 Gemini | Google Gemini format | [Documentation](https://doc.cinatoken.com/en/api/google-gemini-chat) |
 | 🔧 Dify | ChatFlow mode | - |
 | 🎯 Custom upstream | Supports configuring legally authorized upstream endpoints | - |
 
@@ -270,16 +270,16 @@ docker run --name new-api -d --restart always \
 <details>
 <summary>View complete interface list</summary>
 
-- [Chat Interface (Chat Completions)](https://docs.newapi.pro/en/docs/api/ai-model/chat/openai/create-chat-completion)
-- [Response Interface (Responses)](https://docs.newapi.pro/en/docs/api/ai-model/chat/openai/create-response)
-- [Image Interface (Image)](https://docs.newapi.pro/en/docs/api/ai-model/images/openai/v1-images-generations--post)
-- [Audio Interface (Audio)](https://docs.newapi.pro/en/docs/api/ai-model/audio/openai/create-transcription)
-- [Video Interface (Video)](https://docs.newapi.pro/en/docs/api/ai-model/videos/create-video-generation)
-- [Embedding Interface (Embeddings)](https://docs.newapi.pro/en/docs/api/ai-model/embeddings/create-embedding)
-- [Rerank Interface (Rerank)](https://docs.newapi.pro/en/docs/api/ai-model/rerank/create-rerank)
-- [Realtime Conversation (Realtime)](https://docs.newapi.pro/en/docs/api/ai-model/realtime/create-realtime-session)
-- [Claude Chat](https://docs.newapi.pro/en/docs/api/ai-model/chat/create-message)
-- [Google Gemini Chat](https://doc.newapi.pro/en/api/google-gemini-chat)
+- [Chat Interface (Chat Completions)](https://docs.cinatoken.com/en/docs/api/ai-model/chat/openai/create-chat-completion)
+- [Response Interface (Responses)](https://docs.cinatoken.com/en/docs/api/ai-model/chat/openai/create-response)
+- [Image Interface (Image)](https://docs.cinatoken.com/en/docs/api/ai-model/images/openai/v1-images-generations--post)
+- [Audio Interface (Audio)](https://docs.cinatoken.com/en/docs/api/ai-model/audio/openai/create-transcription)
+- [Video Interface (Video)](https://docs.cinatoken.com/en/docs/api/ai-model/videos/create-video-generation)
+- [Embedding Interface (Embeddings)](https://docs.cinatoken.com/en/docs/api/ai-model/embeddings/create-embedding)
+- [Rerank Interface (Rerank)](https://docs.cinatoken.com/en/docs/api/ai-model/rerank/create-rerank)
+- [Realtime Conversation (Realtime)](https://docs.cinatoken.com/en/docs/api/ai-model/realtime/create-realtime-session)
+- [Claude Chat](https://docs.cinatoken.com/en/docs/api/ai-model/chat/create-message)
+- [Google Gemini Chat](https://doc.cinatoken.com/en/api/google-gemini-chat)
 
 </details>
 
@@ -315,14 +315,14 @@ docker run --name new-api -d --restart always \
 | `AZURE_DEFAULT_API_VERSION` | Azure API version | `2025-04-01-preview` |
 | `ERROR_LOG_ENABLED` | Error log switch | `false` |
 | `PYROSCOPE_URL` | Pyroscope server address | - |
-| `PYROSCOPE_APP_NAME` | Pyroscope application name | `new-api` |
+| `PYROSCOPE_APP_NAME` | Pyroscope application name | `cinatoken` |
 | `PYROSCOPE_BASIC_AUTH_USER` | Pyroscope basic auth user | - |
 | `PYROSCOPE_BASIC_AUTH_PASSWORD` | Pyroscope basic auth password | - |
 | `PYROSCOPE_MUTEX_RATE` | Pyroscope mutex sampling rate | `5` |
 | `PYROSCOPE_BLOCK_RATE` | Pyroscope block sampling rate | `5` |
-| `HOSTNAME` | Hostname tag for Pyroscope | `new-api` |
+| `HOSTNAME` | Hostname tag for Pyroscope | `cinatoken` |
 
-📖 **Complete configuration:** [Environment Variables Documentation](https://docs.newapi.pro/en/docs/installation/config-maintenance/environment-variables)
+📖 **Complete configuration:** [Environment Variables Documentation](https://docs.cinatoken.com/en/docs/installation/config-maintenance/environment-variables)
 
 </details>
 
@@ -350,7 +350,7 @@ docker-compose up -d
 
 **Using SQLite:**
 ```bash
-docker run --name new-api -d --restart always \
+docker run --name cinatoken -d --restart always \
   -p 3000:3000 \
   -e TZ=Asia/Shanghai \
   -v ./data:/data \
@@ -359,7 +359,7 @@ docker run --name new-api -d --restart always \
 
 **Using MySQL:**
 ```bash
-docker run --name new-api -d --restart always \
+docker run --name cinatoken -d --restart always \
   -p 3000:3000 \
   -e SQL_DSN="root:123456@tcp(localhost:3306)/oneapi" \
   -e TZ=Asia/Shanghai \
@@ -413,8 +413,8 @@ docker run --name new-api -d --restart always \
 
 | Project | Description |
 |------|------|
-| [new-api-key-tool](https://github.com/cinagroup/cinatoken-key-tool) | Key quota query tool |
-| [new-api-horizon](https://github.com/cinagroup/cinatoken-horizon) | New API high-performance optimized version |
+| [cinatoken-key-tool](https://github.com/cinagroup/cinatoken-key-tool) | Key quota query tool |
+| [cinatoken-horizon](https://github.com/cinagroup/cinatoken-horizon) | CinaToken high-performance optimized version |
 
 ---
 
@@ -424,10 +424,10 @@ docker run --name new-api -d --restart always \
 
 | Resource | Link |
 |------|------|
-| 📘 FAQ | [FAQ](https://docs.newapi.pro/en/docs/support/faq) |
-| 💬 Community Interaction | [Communication Channels](https://docs.newapi.pro/en/docs/support/community-interaction) |
-| 🐛 Issue Feedback | [Issue Feedback](https://docs.newapi.pro/en/docs/support/feedback-issues) |
-| 📚 Complete Documentation | [Official Documentation](https://docs.newapi.pro/en/docs) |
+| 📘 FAQ | [FAQ](https://docs.cinatoken.com/en/docs/support/faq) |
+| 💬 Community Interaction | [Communication Channels](https://docs.cinatoken.com/en/docs/support/community-interaction) |
+| 🐛 Issue Feedback | [Issue Feedback](https://docs.cinatoken.com/en/docs/support/feedback-issues) |
+| 📚 Complete Documentation | [Official Documentation](https://docs.cinatoken.com/en/docs) |
 
 ### 🤝 Contribution Guide
 
@@ -452,11 +452,11 @@ Welcome all forms of contribution!
 
 <div align="center">
 
-### 💖 Thank you for using New API
+### 💖 Thank you for using CinaToken
 
 If this project is helpful to you, welcome to give us a ⭐️ Star！
 
-**[Official Documentation](https://docs.newapi.pro/en/docs)** • **[Issue Feedback](https://github.com/cinagroup/cinatoken/issues)** • **[Latest Release](https://github.com/cinagroup/cinatoken/releases)**
+**[Official Documentation](https://docs.cinatoken.com/en/docs)** • **[Issue Feedback](https://github.com/cinagroup/cinatoken/issues)** • **[Latest Release](https://github.com/cinagroup/cinatoken/releases)**
 
 <sub>Built with ❤️ by cinagroup</sub>
 

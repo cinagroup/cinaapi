@@ -18,7 +18,7 @@ services:
       - ./data:/data
       - ./logs:/app/logs
     environment:
-      - SQL_DSN=postgresql://root:123456@postgres:5432/new-api  # ⚠️ Change password in production!
+      - SQL_DSN=postgresql://root:123456@postgres:5432/cinatoken  # ⚠️ Change password in production!
       - REDIS_CONN_STRING=redis://:123456@redis:6379             # ⚠️ Change password in production!
       - CORS_ORIGINS=https://app.cinatoken.com                    # Allowed frontend origins (comma-separated)
       - TZ=Asia/Shanghai
@@ -56,7 +56,7 @@ services:
     environment:
       POSTGRES_USER: root
       POSTGRES_PASSWORD: 123456  # ⚠️ Change password in production!
-      POSTGRES_DB: new-api
+      POSTGRES_DB: cinatoken
     volumes:
       - pg_data:/var/lib/postgresql/data
     networks:
