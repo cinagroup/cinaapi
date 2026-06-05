@@ -54,6 +54,9 @@ export default defineConfig(({ envMode }) => {
       entry: {
         index: './src/main.tsx',
       },
+      define: {
+        'import.meta.env.VITE_REACT_APP_SERVER_URL': JSON.stringify(serverUrl),
+      },
     },
     resolve: {
       alias: {
