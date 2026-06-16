@@ -1,6 +1,6 @@
-package common
+﻿package common
 
-import "github.com/QuantumNous/new-api/constant"
+import "github.com/cinagroup/cinatoken/constant"
 
 const defaultAnonymousRequestBodyLimitKB = 512
 

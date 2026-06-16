@@ -1,11 +1,11 @@
-package middleware
+﻿package middleware
 
 import (
 	"bytes"
 	"io"
 	"net/http"
 
-	"github.com/QuantumNous/new-api/common"
+	"github.com/cinagroup/cinatoken/common"
 	"github.com/gin-gonic/gin"
 )
 

@@ -1,12 +1,12 @@
-package controller
+﻿package controller
 
 import (
 	"fmt"
 	"os"
 
-	"github.com/QuantumNous/new-api/common"
-	"github.com/QuantumNous/new-api/constant"
-	"github.com/QuantumNous/new-api/model"
+	"github.com/cinagroup/cinatoken/common"
+	"github.com/cinagroup/cinatoken/constant"
+	"github.com/cinagroup/cinatoken/model"
 
 	"github.com/gin-gonic/gin"
 )

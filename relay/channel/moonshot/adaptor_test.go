@@ -1,11 +1,11 @@
-package moonshot
+﻿package moonshot
 
 import (
 	"testing"
 
-	"github.com/QuantumNous/new-api/common"
-	"github.com/QuantumNous/new-api/dto"
-	relaycommon "github.com/QuantumNous/new-api/relay/common"
+	"github.com/cinagroup/cinatoken/common"
+	"github.com/cinagroup/cinatoken/dto"
+	relaycommon "github.com/cinagroup/cinatoken/relay/common"
 	"github.com/stretchr/testify/require"
 )
 

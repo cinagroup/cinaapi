@@ -1,4 +1,4 @@
-package openai
+﻿package openai
 
 import (
 	"io"
@@ -7,8 +7,8 @@ import (
 	"strings"
 	"testing"
 
-	"github.com/QuantumNous/new-api/constant"
-	relaycommon "github.com/QuantumNous/new-api/relay/common"
+	"github.com/cinagroup/cinatoken/constant"
+	relaycommon "github.com/cinagroup/cinatoken/relay/common"
 	"github.com/gin-gonic/gin"
 	"github.com/stretchr/testify/require"
 )

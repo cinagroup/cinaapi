@@ -1,4 +1,4 @@
-package helper
+﻿package helper
 
 import (
 	"bytes"
@@ -9,8 +9,8 @@ import (
 	"net/url"
 	"testing"
 
-	"github.com/QuantumNous/new-api/common"
-	relayconstant "github.com/QuantumNous/new-api/relay/constant"
+	"github.com/cinagroup/cinatoken/common"
+	relayconstant "github.com/cinagroup/cinatoken/relay/constant"
 	"github.com/gin-gonic/gin"
 	"github.com/stretchr/testify/require"
 )

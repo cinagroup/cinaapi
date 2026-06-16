@@ -1,4 +1,4 @@
-{
+﻿{
   "translation": {
     " + Web搜索 {{count}}次 / 1K 次 * {{symbol}}{{price}} * {{ratioType}} {{ratio}}_other": " + Web搜索 {{count}}次 / 1K 次 * {{symbol}}{{price}} * {{ratioType}} {{ratio}}",
     " + 图片生成调用 {{symbol}}{{price}} / 1次 * {{ratioType}} {{ratio}}": " + 图片生成调用 {{symbol}}{{price}} / 1次 * {{ratioType}} {{ratio}}",
@@ -181,7 +181,7 @@
     "Logo 图片地址": "Logo 图片地址",
     "Midjourney 任务记录": "Midjourney 任务记录",
     "MIT许可证": "MIT许可证",
-    "New API项目仓库地址：": "New API项目仓库地址：",
+    "CinaToken项目仓库地址：": "CinaToken项目仓库地址：",
     "NewAPI 默认不会将入口请求的 User-Agent 透传到上游渠道；该条件仅用于识别访问本站点的客户端。": "NewAPI 默认不会将入口请求的 User-Agent 透传到上游渠道；该条件仅用于识别访问本站点的客户端。",
     "OAuth Client ID": "OAuth Client ID",
     "OAuth Client Secret": "OAuth Client Secret",
@@ -363,7 +363,7 @@
     "为了保护账户安全，请验证您的身份。": "为了保护账户安全，请验证您的身份。",
     "为保证匹配准确，请确保客户端直连本站点（避免反向代理/网关改写 User-Agent）。": "为保证匹配准确，请确保客户端直连本站点（避免反向代理/网关改写 User-Agent）。",
     "为特定用户分组配置可用分组的增减规则。「添加」为该分组新增可用分组，「移除」移除默认可用分组，「追加」直接追加分组": "为特定用户分组配置可用分组的增减规则。「添加」为该分组新增可用分组，「移除」移除默认可用分组，「追加」直接追加分组",
-    "为空则默认使用服务器地址，多个 Origin 用逗号分隔，例如 https://newapi.pro,https://newapi.com ,注意不能携带[]，需使用https": "为空则默认使用服务器地址，多个 Origin 用逗号分隔，例如 https://newapi.pro,https://newapi.com ,注意不能携带[]，需使用https",
+    "为空则默认使用服务器地址，多个 Origin 用逗号分隔，例如 https://cinatoken.com,https://newapi.com ,注意不能携带[]，需使用https": "为空则默认使用服务器地址，多个 Origin 用逗号分隔，例如 https://cinatoken.com,https://newapi.com ,注意不能携带[]，需使用https",
     "主页链接填": "主页链接填",
     "之前的所有日志": "之前的所有日志",
     "二步验证已重置": "二步验证已重置",
@@ -489,7 +489,7 @@
     "例如": "例如",
     "例如 /var/cache/new-api": "例如 /var/cache/new-api",
     "例如 €, £, Rp, ₩, ₹...": "例如 €, £, Rp, ₩, ₹...",
-    "例如 https://docs.newapi.pro": "例如 https://docs.newapi.pro",
+    "例如 https://docs.cinatoken.com": "例如 https://docs.cinatoken.com",
     "例如 https://example.com/api/waffo/webhook": "例如 https://example.com/api/waffo/webhook",
     "例如 https://example.com/console/topup": "例如 https://example.com/console/topup",
     "例如：": "例如：",
@@ -1169,7 +1169,7 @@
     "如：香港线路": "如：香港线路",
     "开启后，亲和到的渠道被禁用，或不再适用于当前分组/模型时，仍保留这条亲和；关闭时会删除并重新选择渠道。": "开启后，亲和到的渠道被禁用，或不再适用于当前分组/模型时，仍保留这条亲和；关闭时会删除并重新选择渠道。",
     "如果亲和到的渠道失败，重试到其他渠道成功后，将亲和更新到成功的渠道。": "如果亲和到的渠道失败，重试到其他渠道成功后，将亲和更新到成功的渠道。",
-    "如果你对接的是上游One API或者New API等转发项目，请使用OpenAI类型，不要使用此类型，除非你知道你在做什么。": "如果你对接的是上游One API或者New API等转发项目，请使用OpenAI类型，不要使用此类型，除非你知道你在做什么。",
+    "如果你对接的是上游One API或者CinaToken等转发项目，请使用OpenAI类型，不要使用此类型，除非你知道你在做什么。": "如果你对接的是上游One API或者CinaToken等转发项目，请使用OpenAI类型，不要使用此类型，除非你知道你在做什么。",
     "如果用户请求中包含系统提示词，则使用此设置拼接到用户的系统提示词前面": "如果用户请求中包含系统提示词，则使用此设置拼接到用户的系统提示词前面",
     "如果镜像为私有，请填写密码或Token": "如果镜像为私有，请填写密码或Token",
     "如果镜像为私有，请填写用户名": "如果镜像为私有，请填写用户名",
