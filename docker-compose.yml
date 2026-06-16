@@ -27,8 +27,12 @@ services:
       - NODE_NAME=cinatoken-node-1                                  # Node name for audit logs
       # - FRONTEND_BASE_URL=https://app.cinatoken.com            # Optional: frontend URL when hosted separately (e.g. Cloudflare Pages)
 #     - STREAMING_TIMEOUT=300                                    # Streaming timeout (s), default 120
+#     - RELAY_IDLE_CONN_TIMEOUT=90                               # Relay HTTP client idle keep-alive timeout (s), defaults to Go standard library; set 0 to disable
 #     - SESSION_SECRET=random_string                              # ⚠️ Required for multi-node deployments!
 #     - SYNC_FREQUENCY=60                                        # Periodic DB sync interval (s)
+#     - GOOGLE_ANALYTICS_ID=G-XXXXXXXXXX                         # Google Analytics Measurement ID
+#     - UMAMI_WEBSITE_ID=xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx    # Umami Website ID
+#     - UMAMI_SCRIPT_URL=https://analytics.umami.is/script.js    # Umami Script URL, defaults to official URL
 
     depends_on:
       - redis

@@ -7,6 +7,7 @@ import (
 
 	"github.com/cinagroup/cinatoken/common"
 	"github.com/cinagroup/cinatoken/i18n"
+	"github.com/cinagroup/cinatoken/logger"
 	"github.com/cinagroup/cinatoken/model"
 	"github.com/cinagroup/cinatoken/setting/operation_setting"
 
@@ -110,6 +111,11 @@ func AddRedemption(c *gin.Context) {
 		}
 		keys = append(keys, key)
 	}
+	recordManageAudit(c, "redemption.create", map[string]interface{}{
+		"name":  redemption.Name,
+		"count": redemption.Count,
+		"quota": logger.LogQuota(redemption.Quota),
+	})
 	c.JSON(http.StatusOK, gin.H{
 		"success": true,
 		"message": "",

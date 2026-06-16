@@ -1,7 +1,6 @@
 package ollama
 
 import (
-	"bufio"
 	"encoding/json"
 	"fmt"
 	"io"
@@ -12,6 +11,7 @@ import (
 	"github.com/cinagroup/cinatoken/common"
 	"github.com/cinagroup/cinatoken/dto"
 	relaycommon "github.com/cinagroup/cinatoken/relay/common"
+	"github.com/cinagroup/cinatoken/relay/helper"
 	"github.com/cinagroup/cinatoken/service"
 	"github.com/cinagroup/cinatoken/types"
 
@@ -397,7 +397,7 @@ func PullOllamaModelStream(baseURL, apiKey, modelName string, progressCallback f
 	}
 
 	// 读取流式响应
-	scanner := bufio.NewScanner(response.Body)
+	scanner := helper.NewStreamScanner(response.Body)
 	successful := false
 	for scanner.Scan() {
 		line := scanner.Text()
